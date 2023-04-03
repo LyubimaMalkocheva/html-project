@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PRODUCTS</title>
+	<link rel="stylesheet" href="style_product.css">
+</head>
+<body>
+<header>
+			<a href="#"><img src="logo.png" class="logo"></a>
+			<div class="toggleMenu" onclick="menuToggle();"></div>
+			<ul class="navigation">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="contacts.html">Contact</a></li>
+			</ul>
+ </header>
+<div class="content-prod">
+	<div class="cont-col">	
+	<div class="Slideshow">
+	  <img class="mySlides" src="img-1.jpg">
+	  <img class="mySlides" src="img-2.jpg">
+	  <img class="mySlides" src="img-3.jpg">
+	</div>
+		<div class="slide-cont">
+			<h1>Our Products</h1>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="row-2">
+	<h2>ALL YOUR FAVORITE FLAVORS. ALL RIGHT HERE.</h2>
+</div>
+<div class="products">
+<div class="products-1">
+	<div class="prod">
+		 <img src="pepsi001.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="pepsi002.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="pepsi003.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="pepsi-cafe.png">
+		 <h4>Original Taste</h4>
+	</div>
+</div>
+
+<div class="separate"></div>
+
+	<div class="products-2">
+	<div class="prod">
+		 <img src="pepsi-cherry.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="pepsi-cherry-1.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="PEPSI-CHERY-2.png">
+		 <h4>Original Taste</h4>
+	</div>
+	<div class="prod">
+		 <img src="pepsi-cherry-3.png">
+		 <h4>Original Taste</h4>
+	</div>
+</div>
+</div>
+<footer>
+		<div class="fcol">
+		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<img src="logo.png">
+  	 		</div>
+  	 	</div>
+	</footer>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function menuToggle()
+   	  {
+   	  	const toggleMenu = document.querySelector('.toggleMenu');
+   	  	const navigation = document.querySelector('.navigation');
+   	  	toggleMenu.classList.toggle('active');
+   	  	navigation.classList.toggle('active');
+   	  }
+
+
+</script>
+ 
+</body>
+</html>

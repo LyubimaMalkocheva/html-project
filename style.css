@@ -1,0 +1,386 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body
+{
+	background: #0062be;
+}
+
+section
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+}
+
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo
+{
+	position: relative;
+	max-width: 80px;
+}
+
+header ul
+{
+	position: relative;
+	display: flex;
+}
+
+
+header ul li{
+	list-style: none;
+}
+
+
+header ul li a
+{
+	display: inline-block;
+	color: #fff;
+	font-weight: 400;
+	margin-left: 40px;
+	text-decoration: none;
+}
+
+.content{
+
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content .textBox
+{
+	position: relative;
+	max-width: 600px;
+}
+.content .textBox h2
+{
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.content .textBox h2 span
+{
+	font-size: 2em;
+}
+
+.content .textBox p{
+	color: #fff;
+}
+
+.content .textBox a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #fff;
+	color: #111;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.content .imgBox
+{
+	width: 600px;
+	display: flex;
+	padding-right: 50px;
+	margin-top: 50px;
+	justify-content: flex-end;
+}
+
+.content .imgBox img{
+	max-width: 260px;
+}
+.thumb
+{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+
+.thumb li
+{
+	list-style: none;
+	display: inline-block;
+	max-width: 0px 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	padding-right: 7px;
+}
+
+.thumb li:hover
+{
+	transform: translateY(-15px);
+}
+
+.thumb li img
+{
+	max-width: 40px;
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+
+footer
+{
+	background-color: #24262b;
+	margin-top: 10%;
+}
+
+.fcol
+{
+	display: flex;
+}
+
+.footer-col 
+{
+	padding: 50px 20px 20px 20px;
+	width: 25%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.footer-col h4
+{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+}
+
+.footer-col ul
+{
+	list-style: none;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+
+/*responsive*/
+
+@media(max-width: 426px){
+  .fcol
+{
+	display: block;
+}
+
+.footer-col 
+{
+	padding: 50px 20px 20px 20px;
+	width: 50%;
+	box-sizing: border-box;
+	height: auto;
+	margin: auto;
+}
+.footer-col img
+{
+	width: 70px;
+}
+}
+
+@media (max-width: 990px)
+{
+	section
+	{
+		padding: 40px;
+		padding-bottom: 140px;
+	}
+	header .logo
+	{
+		position: relative;
+		max-width: 60px;
+	}
+	header ul{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: 0.2s;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	header ul.active
+	{
+		visibility: visible;
+		opacity: 1;/*да няма прозрачност*/
+	}
+
+	header ul li a
+	{
+		display: inline-block;
+		color: #111;
+		font-weight: 400;
+		margin-left: 0;
+		text-decoration: none;
+		font-size: 2em;
+		margin: 10px 0;
+	}
+
+	header ul li a:hover
+	{
+		color: #e60c2c;
+	}
+	.toggleMenu
+	{
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background: url(menu.png);
+		background-position: center;
+		background-size: 30px;
+		background-repeat: no-repeat;
+		z-index: 2;
+		cursor: pointer;
+	}
+
+	.toggleMenu.active
+	{
+
+		background: url(close.png);
+		background-position: center;
+		background-size: 25px;
+		background-repeat: no-repeat;
+		filter: invert(1);/*потъмнява хикса*/
+	}
+
+	.content
+	{
+		flex-direction: column;
+		margin-top: 80px;
+	}
+
+	.content .textBox
+	{
+		position: relative;
+		max-width: 100%;
+		padding-right: 20px;
+	}
+
+	.content .textBox h2
+	{
+		font-size: 3em;
+	}
+	.content .textBox a
+	{
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+	.content .imgBox
+	{
+		width: 100%;
+		display: flex;
+		padding-right: 0;
+		margin-top: 50px;
+		justify-content: center;
+	}
+	.content .imgBox img
+	{
+		max-width: 150px;
+	}
+	.thumb li img
+	{
+		max-width: 30px;
+	}
+
+
+.fcol
+{
+	display: block;
+}
+
+.footer-col 
+{
+	padding: 50px 20px 20px 20px;
+	width: 50%;
+	box-sizing: border-box;
+	height: auto;
+	margin: auto;
+}
+.footer-col img
+{
+	width: 70px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
